@@ -1,3 +1,8 @@
+/*
+ * File: 13-is_palindrome.c
+ * Auth: Brennan D Baraban
+ */
+
 #include "lists.h"
 
 listint_t *reverse_listint(listint_t **head);
