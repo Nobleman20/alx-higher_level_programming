@@ -1,4 +1,4 @@
-#!/bin/usr/node
-// Script by Emmanuel oluyege
+#!/usr/bin/node
+// Script by Emmanuel Oluyege
 
-myVar = 333;
+myVar = 333;c

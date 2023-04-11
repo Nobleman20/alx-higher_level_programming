@@ -1,6 +1,6 @@
-#!/bin/usr/node
+#!/usr/bin/node
 // Script by Emmanuel Oluyege
 
 exports.addMeMaybe = function (number, theFunction) {
-	theFunction(++number);
+  theFunction(++number);
 };
