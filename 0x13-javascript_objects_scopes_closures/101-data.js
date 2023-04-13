@@ -1,5 +1,4 @@
 #!/usr/bin/node
-// By Emmanuel Oluyege
 
 exports.dict = {
   89: 1,
