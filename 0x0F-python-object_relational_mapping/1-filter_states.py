@@ -1,10 +1,10 @@
 #!/usr/bin/python3
-
+# By Emmanuel Oluyege
 
 """  lists all the states from the database hbtn_0e_0_usa """
 
-import MySQLdb
 import sys
+import MySQLdb
 
 
 if __name__ == "__main__":
