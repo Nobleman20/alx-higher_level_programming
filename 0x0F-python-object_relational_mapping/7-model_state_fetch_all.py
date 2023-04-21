@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-& By Emmanuel Oluyege
+# By Emmanuel Oluyege
 
 """
 Start link class to table in database
