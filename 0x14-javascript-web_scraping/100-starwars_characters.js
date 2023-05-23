@@ -1,18 +1,23 @@
 #!/usr/bin/node
+// script prints all characters of a Star Wars movie
 const request = require('request');
-const url = 'http://swapi.co/api/films/' + process.argv[2];
 
+const movieId = process.argv[2];
+const url = `https://swapi-api.alx-tools.com/api/films/${movieId}/`;
 
-request(url, function (err, response, body) {
-  if (err == null) {
-    const resp = JSON.parse(body);
-    const characters = resp.characters;
-    for (let i = 0; i < characters.length; i++) {
-      request(characters[i], function (err, response, body) {
-        if (err == null) {
-          console.log(JSON.parse(body).name);
-        }
-      });
-    }
+request.get(url, (error, response, body) => {
+  if (error) {
+    console.error(error);
+    return;
   }
+  const characterList = JSON.parse(body).characters;
+  characterList.forEach(character => {
+    request.get(character, (error, response, body) => {
+      if (error) {
+        console.error(error);
+        return;
+      }
+      console.log(JSON.parse(body).name);
+    });
+  });
 });

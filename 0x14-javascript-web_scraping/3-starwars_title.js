@@ -1,7 +1,15 @@
 #!/usr/bin/node
+// Scriot to display the status code of a GET request
+
 const request = require('request');
-const id = process.argv[2];
-request('http://swapi.co/api/films/' + id + '/', function (error, response, body) {
-  if (error == null) {
-    const json = JSON.parse(body);
-    console.log(json.title);
+
+const url = 'https://swapi-api.alx-tools.com/api/films/' + process.argv[2];
+
+request.get(url, (error, response, body) => {
+  if (response) {
+    const movie = JSON.parse(body);
+    console.log(`${movie.title}`);
+  } else {
+    console.log(error);
+  }
+});
